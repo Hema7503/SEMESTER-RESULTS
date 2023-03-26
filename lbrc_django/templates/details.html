@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SWECHA</title>
+</head>
+
+<body>
+<table class="table">
+      <thead class="thead-light">
+      <tr>
+        <th>RedgNo</th>
+        <th>Date</th>
+        <th>Time</th>
+      </tr>
+      </thead>
+<tbody>
+{% for d in data %}
+<tr>
+<td>{{d.RedgNo}}</td>
+<td>{{d.date}}</td>
+<td>{{d.time}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>

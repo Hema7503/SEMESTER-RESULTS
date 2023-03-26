@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Edit Panel
+{% endblock %}
+
+{% block body %}
+<div class="container w-25 my-3">
+    <div class="mb-3">
+        <h4>Edit</h4>
+    </div>
+    <form action="{% url 'edit_confirm' student.id %}" method="POST">
+        {% csrf_token %}
+        <!--<div class="mb-3">
+            <label for="name" class="form-label">Student Name</label>
+            <input type="text" class="form-control" name="sname" value='{{student.name}}'>
+        </div>-->
+        <div class="mb-3">
+            <label for="RedgNo" class="form-label">RedgNo</label>
+            <input type="str" class="form-control" name="RedgNo" value='{{student.RedgNo}}'>
+        </div>
+        <div class="mb-3">
+            <label for="M3" class="form-label">M3</label>
+            <input type="str" class="form-control" name="M3" value='{{student.M3}}'>
+        </div>
+        <div class="mb-3">
+            <label for="DMS" class="form-label">DMS</label>
+            <input type="str" class="form-control" name="DMS" value='{{student.DMS}}'>
+        </div>
+        <div class="mb-3">
+            <label for="DBMS" class="form-label">DBMS</label>
+            <input type="str" class="form-control" name="DBMS" value='{{student.DBMS}}'>
+        </div>
+        <div class="mb-3">
+            <label for="CO" class="form-label">CO</label>
+            <input type="str" class="form-control" name="CO" value='{{student.CO}}'>
+        </div>
+        <div class="mb-3">
+            <label for="OOP" class="form-label">OOP</label>
+            <input type="str" class="form-control" name="OOP" value='{{student.OOP}}'>
+        </div>
+        <div class="mb-3">
+            <label for="DBMSLAB" class="form-label">DBMSLAB</label>
+            <input type="str" class="form-control" name="DBMSLAB" value='{{student.DBMSLAB}}'>
+        </div>
+        <div class="mb-3">
+            <label for="OOPLAB" class="form-label">OOPLAB</label>
+            <input type="str" class="form-control" name="OOPLAB" value='{{student.OOPLAB}}'>
+        </div>
+        <div class="mb-3">
+            <label for="RLAB" class="form-label">RLAB</label>
+            <input type="str" class="form-control" name="RLAB" value='{{student.RLAB}}'>
+        </div>
+        <div class="mb-3">
+            <label for="WADFSLAB" class="form-label">WADFSLAB</label>
+            <input type="str" class="form-control" name="WADFSLAB" value='{{student.WADFSLAB}}'>
+        </div>
+        <div class="mb-3">
+            <label for="SGPA" class="form-label">SGPA</label>
+            <input type="float" class="form-control" name="SGPA" value='{{student.SGPA}}'>
+        </div>
+
+        <input type="submit" class="form-control btn btn-success" value="save">
+
+    </form>
+</div>
+{% endblock %}
+
+

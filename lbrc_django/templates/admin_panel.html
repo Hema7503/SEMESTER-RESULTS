@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title%}
+    Admin Panel    
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid my-3">
+    <a href="{% url 'add_student' %}" class="btn btn-warning">Add Student</a>
+</div>
+<table class="table table-primary my-4 table-hover">
+    <thead>
+        <tr>
+            <th scope="col">RedgNo</th>
+            <th scope="col">M3</th>
+            <th scope="col">DMS</th>
+            <th scope="col">DBMS</th>
+            <th scope="col">CO</th>
+            <th scope="col">OOP</th>
+            <th scope="col">DBMSLAB</th>
+            <th scope="col">OOPLAB</th>
+            <th scope="col">RLAB</th>
+            <th scope="col">WADFSLAB</th>
+            <th scope="col">SGPA</th>
+            <th scope="col">Operations</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for s in students %}
+        <tr>
+            <th scope="row">{{s.RedgNo}}</th>
+            <td>{{s.M3}}</td>
+            <td>{{s.DMS}}</td>
+            <td>{{s.DBMS}}</td>
+            <td>{{s.CO}}</td>
+            <td>{{s.OOP}}</td>        
+            <td>{{s.DBMSLAB}}</td>
+            <td>{{s.OOPLAB}}</td>
+            <td>{{s.RLAB}}</td>
+            <td>{{s.WADFSLAB}}</td>
+            <td>{{s.SGPA}}</td>
+            <td>
+
+
+                <a href="{% url 'edit-student' s.id %}" class="btn btn-small btn-primary" id='{s.id}'>Edit</a>
+
+
+                <a href="{% url 'delete-student' s.id %}" class="btn btn-small btn-danger" id='{s.id}'>Delete</a>
+
+            </td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

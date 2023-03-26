@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Add Student
+{% endblock %}
+
+{% block body %}
+<div class="container w-25">
+    <h3>Add Student</h3>
+    <form action="{% url 'add_confirm' %}" method="post">
+        {% csrf_token %}
+        <!--<div class="mb-3">
+            <label for="name" class="form-label">Student Name</label>
+            <input type="text" class="form-control" name="sname">
+        </div>-->
+        <div class="mb-3">
+            <label for="RedgNo" class="form-label">RedgNo</label>
+            <input type="string" class="form-control" name="RedgNo" >
+        </div>
+        <div class="mb-3">
+            <label for="M3" class="form-label">M3</label>
+            <input type="string" class="form-control" name="M3">
+        </div>
+        <div class="mb-3">
+            <label for="DMS" class="form-label">DMS</label>
+            <input type="string" class="form-control" name="DMS">
+        </div>
+        <div class="mb-3">
+            <label for="DBMS" class="form-label">DBMS</label>
+            <input type="string" class="form-control" name="DBMS">
+        </div>
+        <div class="mb-3">
+            <label for="CO" class=" form-label">CO</label>
+            <input type="string" class="form-control" name="CO">
+        </div>
+        <div class="mb-3">
+            <label for="OOP" class="form-label">OOP</label>
+            <input type="string" class="form-control" name="OOP">
+        </div>
+        <div class="mb-3">
+            <label for="DBMSLAB" class="form-label">DBMSLAB</label>
+            <input type="int" class="form-control" name="DBMSLAB">
+        </div>
+	<div class="mb-3">
+            <label for="OOPLAB" class="form-label">OOPLAB</label>
+            <input type="string" class="form-control" name="OOPLAB">
+        </div>
+        <div class="mb-3">
+            <label for="RLAB" class="form-label">RLAB</label>
+            <input type="int" class="form-control" name="RLAB">
+        </div>
+        <div class="mb-3">
+            <label for="WADFSLAB" class="form-label">WADFSLAB</label>
+            <input type="string" class="form-control" name="WADFSLAB">
+        </div>
+        <div class="mb-3">
+            <label for="SGPA" class="form-label">SGPA</label>
+            <input type="string" class="form-control" name="SGPA">
+        </div>
+        <input type="submit" class="form-control btn btn-success" value="Add">
+
+    </form>
+</div>
+
+{% endblock %}
+
+
